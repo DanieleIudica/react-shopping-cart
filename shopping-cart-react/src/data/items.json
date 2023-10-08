@@ -3,84 +3,84 @@
         "id": 1,
         "name": "Airpods",
         "des": "Cuffie bluetooth pratiche e alla moda.",
-        "url": "img/01_airpods.png",
+        "url": "/img/01_airpods.png",
         "price": "139.99"
     },
     {
         "id": 2,
         "name": "Speaker JBL",
         "des": "Portatile, potente, impermeabile.",
-        "url": "img/02_speaker.png",
+        "url": "/img/02_speaker.png",
         "price": "18.99"
     },
     {
         "id": 3,
         "name": "Cavo Iphone",
         "des": "Resistente, anti groviglio (2m).",
-        "url": "img/03_cable.png",
+        "url": "/img/03_cable.png",
         "price": "14.99"
     },
     {
         "id": 4,
         "name": "Powerbank",
         "des": "Ricarica il tuo telefono ovunque sei.",
-        "url": "img/04_powerbank.png",
+        "url": "/img/04_powerbank.png",
         "price": "33.99"
     },
     {
         "id": 5,
         "name": "WebCam",
         "des": "Wireless, batteria di lunga durata.",
-        "url": "img/05_cam.png",
+        "url": "/img/05_cam.png",
         "price": "40.99"
     },
     {
         "id": 6,
         "name": "Tripod",
         "des": "Professionale, stabile e versatile.",
-        "url": "img/06_tripod.png",
+        "url": "/img/06_tripod.png",
         "price": "29.99"
     },
     {
         "id": 7,
         "name": "Visore Notturno",
         "des": "Ottima visibilità in ogni condizione.",
-        "url": "img/07_night_vs.png",
+        "url": "/img/07_night_vs.png",
         "price": "230.99"
     },
     {
         "id": 8,
         "name": "FujiCam",
         "des": "Immortala i momenti più belli.",
-        "url": "img/08_fuji_cam.png",
+        "url": "/img/08_fuji_cam.png",
         "price": "89.99"
     },
     {
         "id": 9,
         "name": "Fuji Ricariche",
         "des": "2 box da 10 pezzi per la tua cam.",
-        "url": "img/09_fuji_card.png",
+        "url": "/img/09_fuji_card.png",
         "price": "10.99"
     },
     {
         "id": 10,
         "name": "FireStick",
         "des": "Rendi smart la tua vecchia TV.",
-        "url": "img/10_firestick.png",
+        "url": "/img/10_firestick.png",
         "price": "29.99"
     },
     {
         "id": 11,
         "name": "Kindle",
         "des": "Porta con te tutti i tuoi libri in un solo dispositivo.",
-        "url": "img/11_kindle.png",
+        "url": "/img/11_kindle.png",
         "price": "119.99"
     },
     {
         "id": 12,
         "name": "Sound Bar",
         "des": "Potrai goderti un suono nitido come al cinema.",
-        "url": "img/12_soundBar.png",
+        "url": "/img/12_soundBar.png",
         "price": "99.99"
     }
 ]

@@ -1,4 +1,13 @@
 .cart-btn {
   position: relative;
-  background-color: red;
+  height: 3rem;
+  width: 3rem;
+}
+.cart-btn-badge {
+  position: absolute;
+  color: whitesmoke;
+  height: 1.2rem;
+  width: 1.2rem;
+  bottom: -5px;
+  right: -5px;
 }

@@ -4,7 +4,11 @@ import { CartFill } from "react-bootstrap-icons";
 
 export const MyNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary shadow-sm mb-3">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary shadow-sm mb-3"
+      sticky="top"
+    >
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -22,7 +26,7 @@ export const MyNavbar = () => {
         </Navbar.Collapse>
         <Button variant="outline-primary" className="rounded-circle cart-btn">
           <CartFill />
-          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center">
+          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center cart-btn-badge">
             3
           </div>
         </Button>

@@ -1,17 +1,31 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { CartFill } from "react-bootstrap-icons";
 
 export const MyNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary shadow-sm mb-3">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/store">Store</Nav.Link>
+            <Nav.Link to="/" as={NavLink}>
+              Home
+            </Nav.Link>
+            <Nav.Link to="/about" as={NavLink}>
+              About
+            </Nav.Link>
+            <Nav.Link to="/store" as={NavLink}>
+              Store
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Button variant="outline-primary" className="rounded-circle cart-btn">
+          <CartFill />
+          <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center">
+            3
+          </div>
+        </Button>
       </Container>
     </Navbar>
   );

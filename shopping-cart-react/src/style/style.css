@@ -1,3 +1,4 @@
+/* Navbar */
 .cart-btn {
   position: relative;
   height: 3rem;
@@ -10,4 +11,10 @@
   width: 1.2rem;
   bottom: -5px;
   right: -5px;
+}
+
+/* StoreItem */
+.card-img {
+  height: 500px;
+  object-fit: cover;
 }

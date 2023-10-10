@@ -18,3 +18,10 @@
   height: 500px;
   object-fit: cover;
 }
+.cart-counter {
+  gap: 0.5rem;
+}
+.cart-counter button {
+  width: 3rem;
+  height: 3rem;
+}

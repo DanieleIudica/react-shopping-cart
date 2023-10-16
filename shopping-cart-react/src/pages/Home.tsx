@@ -1,3 +1,9 @@
+import { Container } from "react-bootstrap";
+
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <Container className="py-3">
+      <h1>Home</h1>
+    </Container>
+  );
 };

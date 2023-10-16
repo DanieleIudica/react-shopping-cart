@@ -1,10 +1,10 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import storeItems from "../data/items.json";
 import { StoreItem } from "../components/StoreItem";
 
 export const Store = () => {
   return (
-    <>
+    <Container className="py-3">
       <h1>Store</h1>
       <Row lg={3} md={2} xs={1} className="g-3">
         {storeItems.map((item) => (
@@ -13,6 +13,6 @@ export const Store = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </Container>
   );
 };

@@ -1,3 +1,17 @@
+:root {
+  --background-color: #434a52;
+  --text-color: #e9e7e7;
+}
+
+/* Stile per la modalità scura */
+.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.full-screen {
+  min-height: 100vh;
+}
+
 /* Navbar */
 .cart-btn {
   position: relative;

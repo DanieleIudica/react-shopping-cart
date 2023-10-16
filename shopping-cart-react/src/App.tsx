@@ -5,12 +5,18 @@ import { About } from "./pages/About";
 import { Store } from "./pages/Store";
 import { MyNavbar } from "./components/MyNavbar";
 import "./style/style.css";
+import { useAtom } from "jotai";
+import { darkModeAtom } from "./atom/atom";
 
 function App() {
+  const [darkMode] = useAtom(darkModeAtom);
   return (
     <>
       <MyNavbar />
-      <Container className="my-3">
+      <Container
+        fluid
+        className={darkMode ? "dark-mode full-screen" : "full-screen"}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store />} />

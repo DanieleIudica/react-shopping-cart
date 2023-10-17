@@ -2,19 +2,63 @@ import { Button, Card } from "react-bootstrap";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartFill, DashCircle, PlusCircle } from "react-bootstrap-icons";
 import { useAtom } from "jotai";
-import { darkModeAtom } from "../atom/atom";
+import { cartItemsAtom, darkModeAtom } from "../atom/atom";
 
 type StoreItemProps = {
-  id?: number;
+  id: number;
   name: string;
   des?: string;
   url: string;
   price: number;
 };
 
-export const StoreItem = ({ name, url, price }: StoreItemProps) => {
+export const StoreItem = ({ id, name, url, price }: StoreItemProps) => {
+  const [cartItems, setCartItems] = useAtom(cartItemsAtom);
   const [darkMode] = useAtom(darkModeAtom);
-  const quantity = 0;
+  const quantity = getItemQuantity(id);
+
+  function getItemQuantity(id: number) {
+    return cartItems.find((item) => item.id === id)?.quantity || 0;
+  }
+
+  function increaseCartQuantity(id: number) {
+    setCartItems((currItems) => {
+      if (currItems.find((item) => item.id === id) == null) {
+        return [...currItems, { id, quantity: 1 }];
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  }
+
+  function decreaseCartQuantity(id: number) {
+    setCartItems((currItems) => {
+      if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        return currItems.filter((item) => item.id !== id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  }
+
+  function removeFromCart(id: number) {
+    setCartItems((currItems) => {
+      return currItems.filter((item) => item.id !== id);
+    });
+  }
+
   return (
     <Card
       className="h-100"
@@ -29,19 +73,29 @@ export const StoreItem = ({ name, url, price }: StoreItemProps) => {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100">
+            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
               <CartFill className="me-3 mb-1" /> Add to Cart
             </Button>
           ) : (
             <div className="d-flex align-items-center flex-column">
               <div className="d-flex align-items-center justify-content-center cart-counter">
-                <DashCircle className="text-primary fs-3" />
+                <DashCircle
+                  className="text-primary fs-3"
+                  onClick={() => decreaseCartQuantity(id)}
+                />
                 <div>
                   <span className="fs-3">{quantity}</span> in cart
                 </div>
-                <PlusCircle className="text-primary fs-3" />
+                <PlusCircle
+                  className="text-primary fs-3"
+                  onClick={() => increaseCartQuantity(id)}
+                />
               </div>
-              <Button variant="danger" size="sm">
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={() => removeFromCart(id)}
+              >
                 Remove
               </Button>
             </div>

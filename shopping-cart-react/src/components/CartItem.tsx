@@ -36,11 +36,11 @@ export const CartItem = ({ id, quantity }: CartItemProps) => {
       <div className="d-flex flex-column align-items-center justify-content-center">
         <div>{formatCurrency(item.price * quantity)}</div>
         <Button
-          variant="outline-danger mt-2"
+          variant="danger mt-2"
           className="trash-button"
           onClick={() => removeFromCart(id)}
         >
-          <Trash className="text-center mx-auto fs-4 " />
+          <Trash className="text-center mx-auto fs-5 " />
         </Button>
       </div>
     </Stack>

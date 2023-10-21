@@ -12,7 +12,7 @@ export const About = () => {
         I used <span className="fw-bold">Jotai</span> as store manager to save
         theme preferences, items inside the cart and share data between
         components, <span className="fw-bold">React-Router-Dom</span> for the
-        navigation and <span className="fw-bold">Bootstrap</span> for the style
+        navigation and <span className="fw-bold">Bootstrap</span> for the style.
       </p>
     </Container>
   );

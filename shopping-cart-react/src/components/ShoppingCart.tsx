@@ -4,6 +4,7 @@ import { useAtom } from "jotai";
 import { CartItem } from "../components/CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
+import { BagCheckFill } from "react-bootstrap-icons";
 
 export const ShoppingCart = () => {
   const [isCartOpen, setIsCartOpen] = useAtom(isCartOpenAtom);
@@ -38,12 +39,12 @@ export const ShoppingCart = () => {
                 }, 0)
               )}
             </div>
-            <Button variant="outline-primary">
+            <Button variant="primary">
               <a
-                className="text-primary external-link"
+                className="external-link"
                 href="https://danieleiudica.github.io/MyPortfolio/portfolio/"
               >
-                Checkout{" "}
+                <BagCheckFill className="me-3 mb-1" /> Checkout{" "}
               </a>
             </Button>
           </Stack>

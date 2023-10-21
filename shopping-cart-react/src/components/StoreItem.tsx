@@ -65,7 +65,7 @@ export const StoreItem = ({ id, name, url, price }: StoreItemProps) => {
       bg={darkMode ? "dark" : "light"}
       text={darkMode ? "light" : "dark"}
     >
-      <Card.Img variant="top" src={url} className="card-img" />
+      <Card.Img variant="top" src={url} id="img-bg" />
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
           <span className="fs-2">{name}</span>

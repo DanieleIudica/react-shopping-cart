@@ -39,14 +39,16 @@ export const ShoppingCart = () => {
                 }, 0)
               )}
             </div>
-            <Button variant="primary">
+            <div className="ms-auto fw-bold fs-3">
               <a
                 className="external-link"
                 href="https://danieleiudica.github.io/MyPortfolio/portfolio/"
               >
-                <BagCheckFill className="me-3 mb-1" /> Checkout{" "}
+                <Button variant="primary" className="px-5">
+                  <BagCheckFill className="me-3 mb-1" /> Checkout{" "}
+                </Button>
               </a>
-            </Button>
+            </div>
           </Stack>
         )}
       </Offcanvas.Body>

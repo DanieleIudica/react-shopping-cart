@@ -2,15 +2,16 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { CartFill, MoonFill, SunFill } from "react-bootstrap-icons";
 import { useAtom } from "jotai";
-import { cartItemsAtom, darkModeAtom } from "../atom/atom";
+import { cartItemsAtom, darkModeAtom, isCartOpenAtom } from "../atom/atom";
 
 export const MyNavbar = () => {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom);
+  const [isCartOpen, setIsCartOpen] = useAtom(isCartOpenAtom);
   const [cartItems] = useAtom(cartItemsAtom);
 
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const handleDarkMode = () => setDarkMode(!darkMode);
+
+  const handleShow = () => setIsCartOpen(!isCartOpen);
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
@@ -40,7 +41,11 @@ export const MyNavbar = () => {
           </Nav>
         </Navbar.Collapse>
         <div className="d-flex">
-          <Button variant="outline-primary" className="rounded-circle cart-btn">
+          <Button
+            variant="outline-primary"
+            className="rounded-circle cart-btn"
+            onClick={handleShow}
+          >
             <CartFill />
             <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center cart-btn-badge">
               {cartQuantity}

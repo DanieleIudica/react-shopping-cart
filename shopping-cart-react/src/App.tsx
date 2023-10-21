@@ -7,6 +7,7 @@ import { MyNavbar } from "./components/MyNavbar";
 import "./style/style.css";
 import { useAtom } from "jotai";
 import { darkModeAtom } from "./atom/atom";
+import { ShoppingCart } from "./components/ShoppingCart";
 
 function App() {
   const [darkMode] = useAtom(darkModeAtom);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <ShoppingCart />
       </Container>
     </>
   );

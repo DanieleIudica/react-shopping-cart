@@ -15,7 +15,7 @@
     },
     {
         "id": 3,
-        "name": "Cavo Iphone",
+        "name": "Iphone Cable",
         "des": "Resistente, anti groviglio (2m).",
         "url": "/img/03_cable.png",
         "price": 14.99
@@ -43,7 +43,7 @@
     },
     {
         "id": 7,
-        "name": "Visore Notturno",
+        "name": "Night Visor",
         "des": "Ottima visibilità in ogni condizione.",
         "url": "/img/07_night_vs.png",
         "price": 230.99
@@ -57,7 +57,7 @@
     },
     {
         "id": 9,
-        "name": "Fuji Ricariche",
+        "name": "Fuji Recharge",
         "des": "2 box da 10 pezzi per la tua cam.",
         "url": "/img/09_fuji_card.png",
         "price": 10.99

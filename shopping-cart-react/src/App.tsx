@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { About } from "./pages/About";
 import { Store } from "./pages/Store";
 import { MyNavbar } from "./components/MyNavbar";
@@ -19,9 +18,9 @@ function App() {
         className={darkMode ? "dark-mode full-screen" : "full-screen"}
       >
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
+          <Route path="/" element={<Store />} />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <ShoppingCart />
       </Container>

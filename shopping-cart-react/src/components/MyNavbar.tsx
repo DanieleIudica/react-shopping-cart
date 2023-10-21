@@ -30,13 +30,11 @@ export const MyNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" variant="underline">
             <Nav.Link to="/" as={NavLink}>
-              Home
+              Store
             </Nav.Link>
+
             <Nav.Link to="/about" as={NavLink}>
               About
-            </Nav.Link>
-            <Nav.Link to="/store" as={NavLink}>
-              Store
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
